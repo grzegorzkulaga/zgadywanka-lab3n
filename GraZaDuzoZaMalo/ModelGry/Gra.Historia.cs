@@ -4,9 +4,11 @@ using System.Text;
 
 namespace ModelGry
 {
-    public partia1 class Gra
+    public partial class Gra
     {
-        public List<Ruch> historia;
+        private readonly List<Ruch> historia;
+        public IReadOnlyList<Ruch> Historia => historia;
+
 
         //inner class - klasa wewnętrzna 
         public class Ruch

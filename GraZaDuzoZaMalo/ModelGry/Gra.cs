@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ModelGry
 {
-    public class Gra
+    public partial class Gra
     {
         //inner types
         public enum Odpowiedz { ZaMalo = -1, Trafiono = 0, ZaDuzo = 1 }
