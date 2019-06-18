@@ -42,6 +42,8 @@
             this.textBoxliczba = new System.Windows.Forms.TextBox();
             this.labelwprowadz = new System.Windows.Forms.Label();
             this.ZrezygnujZGry = new System.Windows.Forms.Button();
+            this.LiczbaRuchow = new System.Windows.Forms.Label();
+            this.labelRuch = new System.Windows.Forms.Label();
             this.groupboxLosuj.SuspendLayout();
             this.groupboxSprawdzanie.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +119,8 @@
             // 
             // groupboxSprawdzanie
             // 
+            this.groupboxSprawdzanie.Controls.Add(this.labelRuch);
+            this.groupboxSprawdzanie.Controls.Add(this.LiczbaRuchow);
             this.groupboxSprawdzanie.Controls.Add(this.label2);
             this.groupboxSprawdzanie.Controls.Add(this.Liczba);
             this.groupboxSprawdzanie.Controls.Add(this.buttonsprawdzenie);
@@ -124,7 +128,7 @@
             this.groupboxSprawdzanie.Controls.Add(this.labelwprowadz);
             this.groupboxSprawdzanie.Location = new System.Drawing.Point(12, 229);
             this.groupboxSprawdzanie.Name = "groupboxSprawdzanie";
-            this.groupboxSprawdzanie.Size = new System.Drawing.Size(317, 108);
+            this.groupboxSprawdzanie.Size = new System.Drawing.Size(317, 130);
             this.groupboxSprawdzanie.TabIndex = 2;
             this.groupboxSprawdzanie.TabStop = false;
             this.groupboxSprawdzanie.Text = "Sprawdzanie";
@@ -150,6 +154,7 @@
             this.Liczba.TabIndex = 3;
             this.Liczba.Text = "x";
             this.Liczba.Visible = false;
+            this.Liczba.Click += new System.EventHandler(this.Liczba_Click);
             // 
             // buttonsprawdzenie
             // 
@@ -187,6 +192,27 @@
             this.ZrezygnujZGry.UseVisualStyleBackColor = true;
             this.ZrezygnujZGry.Visible = false;
             // 
+            // LiczbaRuchow
+            // 
+            this.LiczbaRuchow.AutoSize = true;
+            this.LiczbaRuchow.Location = new System.Drawing.Point(104, 109);
+            this.LiczbaRuchow.Name = "LiczbaRuchow";
+            this.LiczbaRuchow.Size = new System.Drawing.Size(12, 13);
+            this.LiczbaRuchow.TabIndex = 5;
+            this.LiczbaRuchow.Text = "x";
+            this.LiczbaRuchow.Visible = false;
+            this.LiczbaRuchow.Click += new System.EventHandler(this.LiczbaRuchow_Click);
+            // 
+            // labelRuch
+            // 
+            this.labelRuch.AutoSize = true;
+            this.labelRuch.Location = new System.Drawing.Point(10, 109);
+            this.labelRuch.Name = "labelRuch";
+            this.labelRuch.Size = new System.Drawing.Size(79, 13);
+            this.labelRuch.TabIndex = 6;
+            this.labelRuch.Text = "Liczba ruchów:";
+            this.labelRuch.Click += new System.EventHandler(this.LabelRuch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +249,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Liczba;
         private System.Windows.Forms.Button ZrezygnujZGry;
+        private System.Windows.Forms.Label labelRuch;
+        private System.Windows.Forms.Label LiczbaRuchow;
     }
 }
 

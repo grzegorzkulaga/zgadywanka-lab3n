@@ -60,8 +60,10 @@ namespace GraGUI
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            Liczba.Visible = true;
+            LiczbaRuchow.Visible = true;
+            
 
+            Liczba.Visible = true;
             int x = int.Parse(textBoxliczba.Text);
             if (Convert.ToString(g.Ocena(x)) == "ZaDuzo")
                 Liczba.Text = "za duża";
@@ -71,6 +73,7 @@ namespace GraGUI
             {
                 string title = "Udało Ci się!";
                 string body = $"Udało Ci się! Czy chcesz spróbować ponownie?";
+                LiczbaRuchow.Text = Convert.ToString((g.LicznikRuchow/2));
 
                 MessageBoxButtons YesOrNo = MessageBoxButtons.YesNo;
                 DialogResult Wynik = MessageBox.Show(body, title, YesOrNo);
@@ -103,8 +106,6 @@ namespace GraGUI
 
                     groupboxSprawdzanie.Visible = false;
                 }
-
-
             }
         }
 
@@ -116,6 +117,21 @@ namespace GraGUI
         private void GroupboxLosuj_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Liczba_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelRuch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LiczbaRuchow_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
