@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.NowaGra = new System.Windows.Forms.Button();
             this.groupboxLosuj = new System.Windows.Forms.GroupBox();
             this.buttonlosuj = new System.Windows.Forms.Button();
@@ -44,6 +46,7 @@
             this.ZrezygnujZGry = new System.Windows.Forms.Button();
             this.LiczbaRuchow = new System.Windows.Forms.Label();
             this.labelRuch = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupboxLosuj.SuspendLayout();
             this.groupboxSprawdzanie.SuspendLayout();
             this.SuspendLayout();
@@ -214,6 +217,12 @@
             this.labelRuch.Text = "Liczba ruchów:";
             this.labelRuch.Click += new System.EventHandler(this.LabelRuch_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "images.png");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,8 +232,9 @@
             this.Controls.Add(this.groupboxSprawdzanie);
             this.Controls.Add(this.groupboxLosuj);
             this.Controls.Add(this.NowaGra);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Zgadywanka";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupboxLosuj.ResumeLayout(false);
             this.groupboxLosuj.PerformLayout();
@@ -252,6 +262,7 @@
         private System.Windows.Forms.Button ZrezygnujZGry;
         private System.Windows.Forms.Label labelRuch;
         private System.Windows.Forms.Label LiczbaRuchow;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

@@ -40,11 +40,13 @@ namespace GraGUI
             groupboxSprawdzanie.Visible = true;
             ZrezygnujZGry.Visible = true;
             //wyswietl kolejne elementy formularza
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.BackgroundImage = imageList1.Images[0];
         }
 
         private void NowaGra_Click(object sender, EventArgs e)
