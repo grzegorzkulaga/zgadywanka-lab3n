@@ -191,6 +191,7 @@
             this.ZrezygnujZGry.Text = "Zrezygnuj z gry :(";
             this.ZrezygnujZGry.UseVisualStyleBackColor = true;
             this.ZrezygnujZGry.Visible = false;
+            this.ZrezygnujZGry.Click += new System.EventHandler(this.ZrezygnujZGry_Click);
             // 
             // LiczbaRuchow
             // 

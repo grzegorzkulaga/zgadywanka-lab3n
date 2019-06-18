@@ -61,9 +61,8 @@ namespace GraGUI
         private void Button1_Click_1(object sender, EventArgs e)
         {
             LiczbaRuchow.Visible = true;
-            
-
             Liczba.Visible = true;
+
             int x = int.Parse(textBoxliczba.Text);
             if (Convert.ToString(g.Ocena(x)) == "ZaDuzo")
                 Liczba.Text = "za duża";
@@ -80,11 +79,11 @@ namespace GraGUI
 
                 if(Wynik == DialogResult.No)
                 {
-                    this.Close();
+                    Close();
                 }
                 if(Wynik == DialogResult.Cancel)
                 {
-                    this.Close();
+                    Close();
                 }
                 else
                 {
@@ -132,6 +131,41 @@ namespace GraGUI
         private void LiczbaRuchow_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void ZrezygnujZGry_Click(object sender, EventArgs e)
+        {
+            string title = "Poddałeś się!";
+            string body = "Czy na pewno chcesz się poddać? Nigdy się nie poddawaj! Zastanów się i kliknij anuluj!";
+
+            MessageBoxButtons YesNoCancel = MessageBoxButtons.YesNoCancel;
+            DialogResult Wynik = MessageBox.Show(body, title, YesNoCancel);
+
+            if (Wynik == DialogResult.Yes)
+            {
+                Close();
+            }
+            else
+            {
+                //Wczytanie nowej gry
+                NowaGra.Enabled = true;
+
+                //Wyczyszczenie textboxów
+                textBoxod.Clear();
+                textBoxdo.Clear();
+                textBoxliczba.Clear();
+
+                //Odblokowanie wcześniej wpisanych textboxów
+                textBoxod.Enabled = true;
+                textBoxdo.Enabled = true;
+
+                //Odblokowanie Groupboxa z wprowadzeniem i losowaniem liczb
+                groupboxLosuj.Visible = false;
+                buttonlosuj.Visible = true;
+
+                groupboxSprawdzanie.Visible = false;
+            }
+                
         }
     }
 }
