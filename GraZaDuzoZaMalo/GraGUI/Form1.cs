@@ -27,6 +27,15 @@ namespace GraGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string check1 = textBoxod.Text;
+            string check2 = textBoxdo.Text;
+
+            if(check1.Length == 0 || check2.Length == 0 )
+            {
+                MessageBox.Show("Nie wprowadziłeś prawidłowego zakresu.");
+            }
+            else
+            {
             //wczytaj zakres do losowania
             int a = int.Parse(textBoxod.Text);
             int b = int.Parse(textBoxdo.Text);
@@ -39,9 +48,8 @@ namespace GraGUI
             buttonlosuj.Visible = false;
             groupboxSprawdzanie.Visible = true;
             ZrezygnujZGry.Visible = true;
-            //wyswietl kolejne elementy formularza
+            }
 
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,48 +72,56 @@ namespace GraGUI
         {
             LiczbaRuchow.Visible = true;
             Liczba.Visible = true;
+            string check3 = textBoxliczba.Text;
 
-            int x = int.Parse(textBoxliczba.Text);
-            if (Convert.ToString(g.Ocena(x)) == "ZaDuzo")
-                Liczba.Text = "za duża";
-            else if (Convert.ToString(g.Ocena(x)) == "ZaMalo")
-                Liczba.Text = "za mała";
-            else
+            if (check3.Length == 0)
             {
-                string title = "Udało Ci się!";
-                string body = $"Udało Ci się! Czy chcesz spróbować ponownie?";
-                LiczbaRuchow.Text = Convert.ToString((g.LicznikRuchow/2));
-
-                MessageBoxButtons YesOrNo = MessageBoxButtons.YesNo;
-                DialogResult Wynik = MessageBox.Show(body, title, YesOrNo);
-
-                if(Wynik == DialogResult.No)
-                {
-                    Close();
-                }
-                if(Wynik == DialogResult.Cancel)
-                {
-                    Close();
-                }
+                MessageBox.Show("Nie wprowadziłeś liczby!");
+            }
+            else
+            { 
+            int x = int.Parse(textBoxliczba.Text);
+                if (Convert.ToString(g.Ocena(x)) == "ZaDuzo")
+                    Liczba.Text = "za duża";
+                else if (Convert.ToString(g.Ocena(x)) == "ZaMalo")
+                    Liczba.Text = "za mała";
                 else
                 {
-                    //Wczytanie nowej gry
-                    NowaGra.Enabled = true;
+                    string title = "Udało Ci się!";
+                    string body = $"Udało Ci się! Czy chcesz spróbować ponownie?";
+                    LiczbaRuchow.Text = Convert.ToString((g.LicznikRuchow / 2));
 
-                    //Wyczyszczenie textboxów
-                    textBoxod.Clear();
-                    textBoxdo.Clear();
-                    textBoxliczba.Clear();
+                    MessageBoxButtons YesOrNo = MessageBoxButtons.YesNo;
+                    DialogResult Wynik = MessageBox.Show(body, title, YesOrNo);
 
-                    //Odblokowanie wcześniej wpisanych textboxów
-                    textBoxod.Enabled = true;
-                    textBoxdo.Enabled = true;
+                    if (Wynik == DialogResult.No)
+                    {
+                        Close();
+                    }
+                    if (Wynik == DialogResult.Cancel)
+                    {
+                        Close();
+                    }
+                    else
+                    {
+                        //Wczytanie nowej gry
+                        NowaGra.Enabled = true;
 
-                    //Odblokowanie Groupboxa z wprowadzeniem i losowaniem liczb
-                    groupboxLosuj.Visible = false;
-                    buttonlosuj.Visible = true;
+                        //Wyczyszczenie textboxów
+                        textBoxod.Clear();
+                        textBoxdo.Clear();
+                        textBoxliczba.Clear();
 
-                    groupboxSprawdzanie.Visible = false;
+                        //Odblokowanie wcześniej wpisanych textboxów
+                        textBoxod.Enabled = true;
+                        textBoxdo.Enabled = true;
+
+                        //Odblokowanie Groupboxa z wprowadzeniem i losowaniem liczb
+                        groupboxLosuj.Visible = false;
+                        buttonlosuj.Visible = true;
+
+                        groupboxSprawdzanie.Visible = false;
+                    }
                 }
             }
         }
