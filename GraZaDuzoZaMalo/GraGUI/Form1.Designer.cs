@@ -38,14 +38,14 @@
             this.textBoxod = new System.Windows.Forms.TextBox();
             this.labelod = new System.Windows.Forms.Label();
             this.groupboxSprawdzanie = new System.Windows.Forms.GroupBox();
+            this.labelRuch = new System.Windows.Forms.Label();
+            this.LiczbaRuchow = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Liczba = new System.Windows.Forms.Label();
             this.buttonsprawdzenie = new System.Windows.Forms.Button();
             this.textBoxliczba = new System.Windows.Forms.TextBox();
             this.labelwprowadz = new System.Windows.Forms.Label();
             this.ZrezygnujZGry = new System.Windows.Forms.Button();
-            this.LiczbaRuchow = new System.Windows.Forms.Label();
-            this.labelRuch = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupboxLosuj.SuspendLayout();
             this.groupboxSprawdzanie.SuspendLayout();
@@ -138,6 +138,27 @@
             this.groupboxSprawdzanie.Visible = false;
             this.groupboxSprawdzanie.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
+            // labelRuch
+            // 
+            this.labelRuch.AutoSize = true;
+            this.labelRuch.Location = new System.Drawing.Point(10, 109);
+            this.labelRuch.Name = "labelRuch";
+            this.labelRuch.Size = new System.Drawing.Size(79, 13);
+            this.labelRuch.TabIndex = 6;
+            this.labelRuch.Text = "Liczba ruchów:";
+            this.labelRuch.Click += new System.EventHandler(this.LabelRuch_Click);
+            // 
+            // LiczbaRuchow
+            // 
+            this.LiczbaRuchow.AutoSize = true;
+            this.LiczbaRuchow.Location = new System.Drawing.Point(104, 109);
+            this.LiczbaRuchow.Name = "LiczbaRuchow";
+            this.LiczbaRuchow.Size = new System.Drawing.Size(12, 13);
+            this.LiczbaRuchow.TabIndex = 5;
+            this.LiczbaRuchow.Text = "x";
+            this.LiczbaRuchow.Visible = false;
+            this.LiczbaRuchow.Click += new System.EventHandler(this.LiczbaRuchow_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -195,27 +216,6 @@
             this.ZrezygnujZGry.UseVisualStyleBackColor = true;
             this.ZrezygnujZGry.Visible = false;
             this.ZrezygnujZGry.Click += new System.EventHandler(this.ZrezygnujZGry_Click);
-            // 
-            // LiczbaRuchow
-            // 
-            this.LiczbaRuchow.AutoSize = true;
-            this.LiczbaRuchow.Location = new System.Drawing.Point(104, 109);
-            this.LiczbaRuchow.Name = "LiczbaRuchow";
-            this.LiczbaRuchow.Size = new System.Drawing.Size(12, 13);
-            this.LiczbaRuchow.TabIndex = 5;
-            this.LiczbaRuchow.Text = "x";
-            this.LiczbaRuchow.Visible = false;
-            this.LiczbaRuchow.Click += new System.EventHandler(this.LiczbaRuchow_Click);
-            // 
-            // labelRuch
-            // 
-            this.labelRuch.AutoSize = true;
-            this.labelRuch.Location = new System.Drawing.Point(10, 109);
-            this.labelRuch.Name = "labelRuch";
-            this.labelRuch.Size = new System.Drawing.Size(79, 13);
-            this.labelRuch.TabIndex = 6;
-            this.labelRuch.Text = "Liczba ruchów:";
-            this.labelRuch.Click += new System.EventHandler(this.LabelRuch_Click);
             // 
             // imageList1
             // 
