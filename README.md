@@ -1,25 +1,26 @@
 ---
 Autor: Grzegorz Kułaga
 Data: 2019.03.17
+Grupa: Lab 3
 ---
 
-# zgadywanka-lab3n
-Projekt realizowany na zajęciach z WDP - Lab3n
+# Zgadywanka
+Projekt realizowany na zajęciach ze Wstępu Do Programowania - Grupa Lab 3
 
-## Rozdział 1
+## Założenia
 
-lorem ipsum
+- Komputer losuje cyfrę, a użytkownik próbuje ją odgadnąć.
 
-## Rodział 1.1
+### Funkcjonalności
+- sprawdzenie czy zakres został poprawnie wprowadzony 
+  - losowanie liczby
+    - wypisywanie propozycji użytkownika i sprawdzenie czy została poprawnie wprowadzona
+    - sprawdzenie czy jest za mała / za duża
+    - sprawdzenie liczby
+    - liczba ruchów
+  - poddanie się wraz z odpowiednim okienkiem i propozycją wrócenia do gry
+  - okienko po wygranej wraz z gratulacjami i zaproszeniem do kolejnej gry
 
-lorem ipsum lorem ipsum
+### Wygląd aplikacji
+![zgadywanka-projekt](http://grzegorzkulaga.pl/zgadywanka-projekt.jpg)
 
-lorem `int x = 1` ipsum
-
-```csharp
-int x = 1;
-int y = x + 2;
-console.writeline(x);
-```
-
-odsyłacz [kliknij_tutaj](http://e.wsei.edu.pl)
